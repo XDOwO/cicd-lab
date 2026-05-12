@@ -10,7 +10,7 @@ async function start() {
     app.log.info(`Server listening at http://${host}:${port}`);
   } catch (error) {
     app.log.error(error);
-    process.exit(1);
+    process.exit(1)
   }
 }
 
