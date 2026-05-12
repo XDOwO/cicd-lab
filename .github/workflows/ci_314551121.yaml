@@ -5,6 +5,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   checks: write
 
 jobs:
@@ -36,8 +37,8 @@ jobs:
 
       - name: Publish test report
         if: always()
-        uses: dorny/test-reporter@v1
+        uses: dorny/test-reporter@v3
         with:
           name: Vitest Tests
           path: reports/junit.xml
-          reporter: junit
+          reporter: java-junit
